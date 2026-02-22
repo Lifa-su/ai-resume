@@ -1,65 +1,135 @@
-# AI 简历生成器 | AI Resume Builder
+<div align="center">
 
-一个纯前端的 AI 简历生成器，用户填写基本信息后，AI 自动优化描述，生成专业简历。
+# 🤖 AI Resume Builder
 
-## ✨ 功能特性
+**Build professional resumes in minutes — powered by AI, no backend required.**
 
-- **表单填写** — 个人信息、工作经历、教育背景、技能特长
-- **AI 优化** — 调用 DeepSeek API 自动润色工作经历描述（STAR 法则）
-- **3 种模板** — 简约 / 专业 / 创意，切换即时预览
-- **实时预览** — 左侧编辑，右侧实时渲染简历
-- **PDF 导出** — 基于浏览器打印，A4 尺寸完美适配
-- **中英双语** — 界面一键切换中文/英文
-- **数据持久化** — 自动保存到 localStorage，刷新不丢失
-- **示例数据** — 首次打开自动填充示例，快速体验
+AI 驱动的智能简历生成器，纯前端实现，填写信息即可一键生成专业简历。
 
-## 🚀 使用方式
+[![Stars](https://img.shields.io/github/stars/Lifa-su/ai-resume?style=flat-square&logo=github&color=yellow)](https://github.com/Lifa-su/ai-resume/stargazers)
+[![Forks](https://img.shields.io/github/forks/Lifa-su/ai-resume?style=flat-square&logo=github)](https://github.com/Lifa-su/ai-resume/network/members)
+[![Issues](https://img.shields.io/github/issues/Lifa-su/ai-resume?style=flat-square&logo=github)](https://github.com/Lifa-su/ai-resume/issues)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Deploy](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square&logo=github-pages)](https://lifa-su.github.io/ai-resume)
 
-直接用浏览器打开 `index.html` 即可：
+<br/>
+
+[🎯 Live Demo](https://lifa-su.github.io/ai-resume) · [🐛 Report Bug](https://github.com/Lifa-su/ai-resume/issues) · [💡 Request Feature](https://github.com/Lifa-su/ai-resume/issues)
+
+</div>
+
+---
+
+<!-- 
+📸 Screenshot placeholder — replace with actual screenshot
+![AI Resume Builder Screenshot](./screenshot.png)
+-->
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 📝 **Smart Form** | Fill in personal info, work experience, education & skills |
+| 🤖 **AI Enhancement** | DeepSeek API auto-polishes job descriptions using the STAR method |
+| 🎨 **3 Templates** | Minimal / Professional / Creative — instant preview on switch |
+| 👀 **Live Preview** | Edit on the left, see your resume render in real-time on the right |
+| 📄 **PDF Export** | Browser-based print, pixel-perfect A4 layout |
+| 🌐 **Bilingual UI** | One-click toggle between Chinese & English |
+| 💾 **Auto Save** | Data persists in `localStorage` — refresh without losing progress |
+| 🎉 **Sample Data** | Pre-filled example on first visit for a quick tour |
+
+## 🚀 Quick Start
+
+No build tools. No Node.js. Just open and go.
 
 ```bash
+# Clone the repo
+git clone https://github.com/Lifa-su/ai-resume.git
+cd ai-resume
+
+# Option 1: Open directly
 open index.html
-# 或
-# python3 -m http.server 8080  然后访问 http://localhost:8080
+
+# Option 2: Local server
+python3 -m http.server 8080
+# Then visit http://localhost:8080
 ```
 
-## 🤖 AI 优化功能
+> 💡 **Online Demo:** [https://lifa-su.github.io/ai-resume](https://lifa-su.github.io/ai-resume)
 
-1. 点击右上角 **🤖 API** 按钮
-2. 输入你的 [DeepSeek API Key](https://platform.deepseek.com/)
-3. 在工作经历描述旁点击 **✨ AI 优化**
-4. AI 会自动用 STAR 法则润色你的工作描述
+## 🤖 AI-Powered Optimization
 
-## 📄 PDF 导出
+1. Click the **🤖 API** button in the top-right corner
+2. Enter your [DeepSeek API Key](https://platform.deepseek.com/)
+3. Click **✨ AI Optimize** next to any job description
+4. AI rewrites your description using the **STAR method** (Situation → Task → Action → Result)
 
-- 点击右上角 **导出 PDF** 按钮（或 `Ctrl/Cmd + P`）
-- 在打印对话框中选择「保存为 PDF」
-- 建议设置：A4 纸张、无边距、启用背景图形
+> 🔒 Your API key stays in your browser — nothing is sent to any server except DeepSeek's API.
 
-## 📐 简历模板
+## 🎨 Resume Templates
 
-| 模板 | 风格 | 适用场景 |
-|------|------|----------|
-| 简约 | 干净留白，单栏布局 | 技术岗、外企 |
-| 专业 | 双栏深色侧边栏 | 传统行业、管理岗 |
-| 创意 | 渐变头部，时间线 | 设计、创意岗位 |
+| Template | Style | Best For |
+|----------|-------|----------|
+| **Minimal** | Clean whitespace, single column | Tech roles, international companies |
+| **Professional** | Two-column with dark sidebar | Traditional industries, management |
+| **Creative** | Gradient header, timeline layout | Design & creative positions |
 
-## 🛠 技术方案
+## 📄 PDF Export
 
-- 纯前端：HTML + CSS + JavaScript，单个 `index.html`
-- 无需构建工具，无需 Node.js
-- DeepSeek Chat API 优化文案
-- CSS `@media print` 实现 PDF 导出
-- `localStorage` 数据持久化
-- Google Fonts (Inter) 优化排版
+1. Click **Export PDF** (or press `Ctrl/Cmd + P`)
+2. Select **Save as PDF** in the print dialog
+3. Recommended: A4 paper, no margins, enable background graphics
 
-## 💰 变现思路
+## 🛠 Tech Stack
 
-- 免费基础版引流（3 个模板）
-- 付费解锁高级模板（更多设计风格）
-- 付费 AI 优化次数包
-- 广告收入
+| Technology | Purpose |
+|-----------|---------|
+| HTML / CSS / JS | Pure frontend, single `index.html` |
+| [DeepSeek Chat API](https://platform.deepseek.com/) | AI text optimization |
+| CSS `@media print` | PDF export |
+| `localStorage` | Client-side data persistence |
+| [Google Fonts (Inter)](https://fonts.google.com/specimen/Inter) | Typography |
 
-## License
+> Zero dependencies. Zero build steps. Works offline (except AI features).
 
-MIT
+## 📦 Project Structure
+
+```
+ai-resume/
+├── index.html          # 🏠 Everything lives here — app, styles & logic
+├── README.md
+└── .github/workflows/  # GitHub Pages deployment
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. **Fork** this repository
+2. Create a feature branch: `git checkout -b feat/amazing-feature`
+3. Commit your changes: `git commit -m 'feat: add amazing feature'`
+4. Push to the branch: `git push origin feat/amazing-feature`
+5. Open a **Pull Request**
+
+### Ideas for Contribution
+
+- 🎨 New resume templates
+- 🌍 More language support
+- 🧪 Accessibility improvements
+- 📱 Mobile responsiveness enhancements
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**If this project helps you, give it a ⭐ — it means a lot!**
+
+如果这个项目对你有帮助，请点个 ⭐ 支持一下！
+
+Made with ❤️ by [Lifa-su](https://github.com/Lifa-su)
+
+</div>
